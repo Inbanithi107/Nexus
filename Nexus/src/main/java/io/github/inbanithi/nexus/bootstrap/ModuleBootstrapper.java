@@ -6,4 +6,7 @@ public class ModuleBootstrapper {
 
     private final ModuleDiscovery moduleDiscovery;
 
+    public ModuleBootstrapper(ModuleDiscovery moduleDiscovery) {
+        this.moduleDiscovery = moduleDiscovery;
+    }
 }
