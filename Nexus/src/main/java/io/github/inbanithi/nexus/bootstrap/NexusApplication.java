@@ -6,8 +6,15 @@ import org.springframework.context.ConfigurableApplicationContext;
 public final class NexusApplication {
 
     public void run(Class<?> application, String[] args){
-        ConfigurableApplicationContext Parentcontext = SpringApplication.run(application, args);
+        ConfigurableApplicationContext parentContext = SpringApplication.run(application, args);
+        ModuleBootstrapper bootstrapper = new ModuleBootstrapper(parentContext);
+        bootstrapper.bootstrap();
+    }
 
+    public void run(SpringApplication application, Class<?> app, String[] args){
+        ConfigurableApplicationContext parentContext = application.run(app, args);
+        ModuleBootstrapper bootstrapper = new ModuleBootstrapper(parentContext);
+        bootstrapper.bootstrap();
     }
 
 }

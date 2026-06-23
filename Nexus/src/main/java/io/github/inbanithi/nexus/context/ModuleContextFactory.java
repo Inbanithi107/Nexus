@@ -1,10 +1,10 @@
 package io.github.inbanithi.nexus.context;
 
 import io.github.inbanithi.nexus.definition.ModuleDefinition;
-import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 
 public interface ModuleContextFactory {
 
-    ApplicationContext create(ModuleDefinition module, ApplicationContext parentContext);
+    ConfigurableApplicationContext create(ModuleDefinition module, ConfigurableApplicationContext parentContext);
 
 }
