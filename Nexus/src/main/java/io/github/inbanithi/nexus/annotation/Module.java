@@ -15,6 +15,6 @@ public @interface Module {
 
     Class<?> configuration();
 
-    String[] dependsOn();
+    String[] dependsOn() default {};
 
 }
